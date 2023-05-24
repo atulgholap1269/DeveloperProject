@@ -18,7 +18,7 @@ public void search(int a[], int n)
 			break;
 		}
 	}
-		if(isPresent==true)
+		if(isPresent)
 		{
 			System.out.println("element is present");
 			

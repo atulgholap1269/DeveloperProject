@@ -43,6 +43,7 @@ public class DuplicateElement {
 		{
 			a[i]=sc.nextInt();
 		}
+	
 		DuplicateElement.duplicateElement(a);
 	}
 }
