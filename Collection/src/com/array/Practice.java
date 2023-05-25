@@ -1,5 +1,10 @@
  package com.array;
 
-public class Practice {
+import java.util.Arrays;
+import java.util.Scanner;
 
+
+public class Practice
+{
+	
 }

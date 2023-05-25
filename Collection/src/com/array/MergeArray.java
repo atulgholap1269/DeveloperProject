@@ -8,7 +8,7 @@ public class MergeArray {
    {
 	  
 	   int count=0;
-	   int mergeRemoveDuplicate[]= new int[a.length+b.length];
+	  // int mergeRemoveDuplicate[]= new int[a.length+b.length];
 	   for( int i=0;i<a.length;i++)
 	   {
 		  merge[i]=a[i];
@@ -17,40 +17,25 @@ public class MergeArray {
 	   
 	   for(int j=0;j<b.length; j++)
 	    {
-		 merge[count++]=b[j];
-	    }
+		  boolean isAdded=false;
+		  for(int k=count-1; k>=0;k--)
+		  {
+			  if(merge[k]==b[j])
+			  {
+				  isAdded=true;
+				  break;
+			  }
+		  }
+		  if(isAdded==false)
+		  
+			  merge[count]=b[j];
+		  count++;
+		  }
+		
+	    
 	   System.out.println(Arrays.toString(merge));
    }
-   public static void duplicateElement(int a[])
-   {
-	   for(int i=0; i<a.length; i++)
-  	    {
-  		 int count=1;
-  		 boolean checkDuplicate=false;
-  		 for(int j=i-1; j>=0;j--)
-  		 {
-  			 if(a[j]==a[i])
-  			 {
-  				 checkDuplicate=true;
-  				 break;
-  			 }
-  		 }
-  		 if(checkDuplicate==false)
-  		 {
-  			 for(int k=i+1;k<a.length; k++)
-  			 {
-  				 if(a[i]==a[k])
-  				 {
-  					 a[k]=0;
-  				 }
-  			 }
-//  			
-  			
-  		 }
-  		
-  	 }
-	   System.out.println(Arrays.toString(a));
-   }
+   
    
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
@@ -72,7 +57,7 @@ public class MergeArray {
 		 int merge[]=new int[a.length+b.length];
 		//int k[]=new int [size+size2];
 		MergeArray.mergeArray(a, b,merge);
-		MergeArray.duplicateElement(merge);
+		
 		//System.out.println(Arrays.toString(merge));
 	}
 }
