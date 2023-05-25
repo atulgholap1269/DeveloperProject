@@ -6,5 +6,8 @@ import java.util.Scanner;
 
 public class Practice
 {
-	
+	private void syso() {
+		// TODO Auto-generated method stub
+
+	}
 }
