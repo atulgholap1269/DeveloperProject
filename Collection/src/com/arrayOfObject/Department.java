@@ -58,6 +58,7 @@ public class Department {
 				int salary= sc.nextInt();
 				e[j]=new Employe(eid,ename,salary);
 			}
+			
 			d[i]= new Department(did,dname,e);
 			
 		}

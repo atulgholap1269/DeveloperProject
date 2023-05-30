@@ -25,7 +25,7 @@ public class Course {
 	Student sd;
 	public Course(int cid, String cname, Student sd) 
 	{
-		super();
+		
 		this.cid = cid;
 		this.cname = cname;
 		this.sd = sd;

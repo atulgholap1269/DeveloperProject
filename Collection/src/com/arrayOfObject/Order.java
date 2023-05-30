@@ -1,4 +1,4 @@
-package com.arrayOfObject;
+ package com.arrayOfObject;
 
 import java.util.Arrays;
 import java.util.Scanner;
