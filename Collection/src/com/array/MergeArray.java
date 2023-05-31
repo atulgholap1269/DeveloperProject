@@ -29,7 +29,7 @@ public class MergeArray {
 		  if(isAdded==false)
 		  
 			  merge[count]=b[j];
-		  count++;
+		      count++;
 		  }
 		
 	    
