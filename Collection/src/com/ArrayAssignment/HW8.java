@@ -6,21 +6,32 @@ import java.util.Scanner;
 public class HW8 {
 	public static void arrangeArray(int a[])
 	{
-	
-		for(int i=0;i<a.length;i++)
-		{
-			for(int j=i+1;j<a.length;j++)
-			{
-				if(a[i]>a[j])
-				{
-					int temp=a[i];
-					a[i]=a[j];
-					a[j]=temp;
-				}
-			}
-			
-			
-		}
+	    int l=0;int r=a.length-1; 
+	   
+	    while(l<r)
+	    {
+	    	if(a[l]<0 &&a[r]>0)
+	    	{
+	    		l++;
+	    		r--;
+	    	}
+	    	else if(a[l]>0 &&a[r]<0)
+	    	{
+	    		int temp=a[l];
+	    		a[l]=a[r];
+	    		a[r]=temp;
+	    		l++;
+	    		r--;
+	    	}
+	    	else if(a[l]<0&&a[r]<0)
+	    	{
+	    		l++;
+	    	}
+	    	else if (a[l]>0&&a[r]>0)
+	    	{
+	    		l++;
+	    	}
+	    }
 		System.out.println(Arrays.toString(a));
 	}
 public static void main(String[] args) {
@@ -32,6 +43,6 @@ public static void main(String[] args) {
 	{
 		a[i]=sc.nextInt();
 	}
-	HW8.arrangeArray(a);
+	arrangeArray(a);
 }
 }

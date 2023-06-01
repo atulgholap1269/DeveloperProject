@@ -6,39 +6,45 @@ import java.util.Scanner;
 public class HW9 {
 	public static void arrangArray(int a[])
 	{
-		int left=0;
-		  int right=a.length-1;
-		  for (int i = 0; i < a.length; i++) 
-		  {
+		int l=0;
+		int r=a.length-1;
+		while(l<r)
+		{
+			if(a[l]%2==0 &&a[r]%2!=0)
+			{
+				l++;
+				r--;
+			}
+			else if(a[l]%2!=0 && a[r]%2==0)
+			{
+				int temp=a[l];
+				a[l]=a[r];
+				a[r]=temp;
+				l++;
+				r--;
+			}
+			else if(a[l]%2==0 && a[r]%2==0)
+			{
+				l++;
+			}
+			else if(a[l]%2!=0 && a[r]%2!=0)
+			{
+				r--; 
+			}
+		}
 		 
-		   while(a[left]%2==0)
-		   {
-		    left++;
-		   }
-		   while(a[right]%2==1)
-		   {
-		    right--;
-		   }
-		 
-		   if(left<right)
-		   {
-		    int temp=a[left];
-		    a[left]=a[right];
-		    a[right]=temp;
-		   }
-		  }
 		System.out.println(Arrays.toString(a));
 		 
 	}
 public static void main(String[] args) {
 	Scanner sc = new Scanner(System.in);
-//	System.out.println("Enter thye size of array");
-//	int size= sc.nextInt();
-	int a[]= {3,4,6,8,7};
-//	for(int i=0;i<a.length;i++)
-//	{
-//		a[i]=sc.nextInt();
-//	}
+	System.out.println("Enter thye size of array");
+	int size= sc.nextInt();
+	int a[]= new int[size];
+	for(int i=0;i<a.length;i++)
+	{
+		a[i]=sc.nextInt();
+	}
 	HW9.arrangArray(a);
 }
 }
