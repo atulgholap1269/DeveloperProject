@@ -1,4 +1,4 @@
-package com.Exception;
+ package com.Exception;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -43,6 +43,10 @@ public static void main(String[] args) {
 	{
 		System.out.println("Error message: "+e3.getMessage());
 		System.out.println("Error type : "+e3.getClass());
+	}
+	finally
+	{
+		System.out.println("Division operation end");
 	}
 }
 }
