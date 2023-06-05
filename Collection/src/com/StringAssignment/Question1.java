@@ -23,6 +23,8 @@ public class Question1 {
 		 System.out.println(a.hashCode());
 		 System.out.println(d.hashCode());
 		 System.out.println(a==d);
+		
+		 System.out.println( a.concat(b));
 		  
 		  
 		 

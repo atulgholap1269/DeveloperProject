@@ -24,7 +24,7 @@ public class Strin2 {
 		String st[]=s2.split(",");
 		for(String ss:st)
 		{
-			System.out.print(ss+" ");
+			System.out.println(ss);
 		}
 		
 		System.out.println("==============================");
